@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "952289148855",
+    "firebase_url": "https://happypaws-cdade-default-rtdb.firebaseio.com",
+    "project_id": "happypaws-cdade",
+    "storage_bucket": "happypaws-cdade.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952289148855:android:35d26bb3642ba0b9977232",
+        "android_client_info": {
+          "package_name": "com.example.happypaws"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952289148855-8afqon1v3npk8louff8spk8gvfi6ai86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiI0ZflSPHCFKRtcgTJQTSEjQV2hiqONY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952289148855-8afqon1v3npk8louff8spk8gvfi6ai86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
