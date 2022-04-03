@@ -39,7 +39,8 @@ import java.io.InputStream;
 import java.util.Random;
 
 public class AddPet extends AppCompatActivity {
-    EditText sno,name,contact,breed,address;
+    EditText name,contact,breed,address;
+    int sno=0;
     Uri filepath;
     ImageView img;
     Button browse, upload;
@@ -110,11 +111,11 @@ public class AddPet extends AppCompatActivity {
     private void uploadToFirebase()
     {
         ProgressDialog dialog = new ProgressDialog(this);
-        dialog.setTitle("File Uploader");
+        dialog.setTitle("Adding Your Pet");
         dialog.show();
         name = (EditText) findViewById(R.id.name);
         breed =(EditText) findViewById(R.id.breed);
-        sno =(EditText) findViewById(R.id.sno);
+//        sno =(EditText) findViewById(R.id.sno);
         contact =(EditText) findViewById(R.id.contact);
         address =(EditText) findViewById(R.id.address);
 
@@ -136,14 +137,17 @@ public class AddPet extends AppCompatActivity {
 
 
                             dataholder obj = new dataholder(name.getText().toString(),contact.getText().toString(),address.getText().toString(),breed.getText().toString(),uri.toString());
-
-                            root.child(sno.getText().toString()).setValue(obj);
+                            Random rn = new Random();
+                            int max = 1000000 ;
+                            int min =0;
+                            sno = rn.nextInt(max - min + 1) + min;
+                            root.child (String.valueOf(sno)).setValue(obj);
 
                             name.setText("");
                             contact.setText("");
                             breed.setText("");
                             address.setText("");
-                            sno.setText("");
+//                            sno.setText("");
                             img.setImageResource(R.drawable.ic_launcher_background);
                             Toast.makeText(AddPet.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
 
@@ -155,7 +159,7 @@ public class AddPet extends AppCompatActivity {
                     @Override
                     public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
                 float percent =(100*snapshot.getBytesTransferred()/snapshot.getTotalByteCount());
-                dialog.setMessage("Uploaded: "+(int)percent+"%");
+                dialog.setMessage("Added: "+(int)percent+"%");
                     }
                 });
     }

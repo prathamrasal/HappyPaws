@@ -33,6 +33,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
         holder.name.setText(model.getName());
         holder.contact.setText(model.getContact());
         holder.breed.setText(model.getBreed());
+        holder.address.setText(model.getAddress());
 
         Glide.with(holder.img.getContext())
             .load(model.getImage())
@@ -52,14 +53,14 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
     class myViewHolder extends RecyclerView.ViewHolder
             {
                 CircleImageView img;
-                TextView name,contact,breed;
+                TextView name,contact,breed,address;
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
             img = (CircleImageView) itemView.findViewById(R.id.img1);
             name =(TextView) itemView.findViewById(R.id.nametext);
             contact =(TextView) itemView.findViewById(R.id.contacttext);
             breed =(TextView) itemView.findViewById(R.id.breedtext);
-
+            address =(TextView) itemView.findViewById(R.id.addresstext);
         }
     }
 

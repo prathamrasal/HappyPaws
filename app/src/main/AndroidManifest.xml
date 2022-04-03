@@ -12,6 +12,8 @@
         android:theme="@style/Theme.HappyPaws">
         <activity
             android:name=".AddPet"
+            android:label="Add Your Pet"
+            android:parentActivityName=".home"
             android:exported="false" />
         <activity
             android:name=".home"
