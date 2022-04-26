@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,7 +13,6 @@ import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-import org.w3c.dom.Text;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -61,6 +61,12 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
             contact =(TextView) itemView.findViewById(R.id.contacttext);
             breed =(TextView) itemView.findViewById(R.id.breedtext);
             address =(TextView) itemView.findViewById(R.id.addresstext);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(view.getContext(), "Contact The Owner for Adopting", Toast.LENGTH_SHORT).show();
+                }
+            });
         }
     }
 

@@ -20,8 +20,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img1"
-            android:layout_width="119dp"
-            android:layout_height="125dp"
+            android:layout_width="172dp"
+            android:layout_height="146dp"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="4dp"
             android:src="@mipmap/ic_launcher"
@@ -43,7 +43,7 @@
             android:textColor="#C59292"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.168"
+            app:layout_constraintHorizontal_bias="0.222"
             app:layout_constraintStart_toEndOf="@+id/nametext2"
             app:layout_constraintTop_toBottomOf="@+id/img1" />
 
@@ -53,12 +53,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/img1"
             android:fontFamily="@font/font1"
-            android:text="Name:"
+            android:text=" Owner's Name:"
             android:textColor="#000000"
             android:textSize="25sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/nametext"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintHorizontal_bias="0.068"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
