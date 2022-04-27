@@ -1,17 +1,26 @@
 package com.example.happypaws;
 
 public class MainModel {
-    String address,name,breed,image,contact;
+    String address,name,breed,image,contact,petimage;
 
     MainModel(){
 
     }
-    public MainModel(String address, String name, String breed, String image, String contact) {
+    public MainModel(String address, String name, String breed, String image, String contact,String petimage) {
         this.address = address;
         this.name = name;
         this.breed = breed;
         this.image = image;
         this.contact = contact;
+        this.petimage=petimage;
+    }
+
+    public String getPetimage() {
+        return petimage;
+    }
+
+    public void setPetimage(String petimage) {
+        this.petimage = petimage;
     }
 
     public String getAddress() {

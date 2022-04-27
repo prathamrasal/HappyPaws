@@ -39,7 +39,7 @@ import java.io.InputStream;
 import java.util.Random;
 
 public class AddPet extends AppCompatActivity {
-    EditText name,contact,breed,address;
+    EditText name,contact,breed,address,petname;
     int sno=0;
     Uri filepath;
     ImageView img;
@@ -118,6 +118,7 @@ public class AddPet extends AppCompatActivity {
 //        sno =(EditText) findViewById(R.id.sno);
         contact =(EditText) findViewById(R.id.contact);
         address =(EditText) findViewById(R.id.address);
+        petname =(EditText) findViewById(R.id.petname);
 
 //        FirebaseDatabase db = FirebaseDatabase.getInstance();
 //        DatabaseReference root =db.getReference();
@@ -136,7 +137,7 @@ public class AddPet extends AppCompatActivity {
                             DatabaseReference root =db.getReference("users");
 
 
-                            dataholder obj = new dataholder(name.getText().toString(),contact.getText().toString(),address.getText().toString(),breed.getText().toString(),uri.toString());
+                            dataholder obj = new dataholder(name.getText().toString(),contact.getText().toString(),address.getText().toString(),breed.getText().toString(),uri.toString(),petname.getText().toString());
                             Random rn = new Random();
                             int max = 1000000 ;
                             int min =0;

@@ -2,14 +2,23 @@ package com.example.happypaws;
 
 public class dataholder
 {
- String name, contact , address, breed, image ;
+ String name, contact , address, breed, image,petimage ;
 
- public dataholder(String name, String contact, String address, String breed, String image) {
+ public dataholder(String name, String contact, String address, String breed, String image,String petimage) {
   this.name = name;
   this.contact = contact;
   this.address = address;
   this.breed = breed;
   this.image = image;
+  this.petimage = petimage;
+ }
+
+ public String getPetimage() {
+  return petimage;
+ }
+
+ public void setPetimage(String petimage) {
+  this.petimage = petimage;
  }
 
  public String getImage() {

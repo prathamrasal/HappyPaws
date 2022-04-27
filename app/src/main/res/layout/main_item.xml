@@ -15,20 +15,38 @@
         android:background="@color/white"
         android:backgroundTint="#5E467A"
         android:fadeScrollbars="true"
-        android:padding="15dp">
+        android:padding="15dp"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="8dp">
 
+
+        <TextView
+            android:id="@+id/petname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/font1"
+            android:text="Pet's Name:"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:padding="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/img1"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img1"
             android:layout_width="172dp"
             android:layout_height="146dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="16dp"
             android:src="@mipmap/ic_launcher"
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,13 +55,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/img1"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:fontFamily="@font/font1"
             android:text="Name"
+            android:padding="1dp"
             android:textColor="#C59292"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintHorizontal_bias="0.187"
             app:layout_constraintStart_toEndOf="@+id/nametext2"
             app:layout_constraintTop_toBottomOf="@+id/img1" />
 
@@ -53,12 +72,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/img1"
             android:fontFamily="@font/font1"
-            android:text=" Owner's Name:"
+            android:padding="1dp"
+            android:text="Owner's Name:"
             android:textColor="#000000"
             android:textSize="25sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/nametext"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.068"
+            app:layout_constraintHorizontal_bias="0.067"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -66,37 +86,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nametext"
-            android:layout_marginTop="8dp"
             android:fontFamily="@font/font1"
             android:text="Breed"
             android:textColor="#C59292"
+            android:padding="1dp"
             android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/nametext"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.177"
-            app:layout_constraintStart_toEndOf="@+id/breedtext2"
-            app:layout_constraintTop_toBottomOf="@+id/nametext" />
+            app:layout_constraintHorizontal_bias="0.738"
+            app:layout_constraintStart_toEndOf="@+id/img1"
+            app:layout_constraintTop_toBottomOf="@+id/breedtext2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/petnametext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nametext"
+            android:fontFamily="@font/font1"
+            android:text="Name"
+            android:textColor="#C59292"
+            android:textSize="25sp"
+            android:padding="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/breedtext2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.733"
+            app:layout_constraintStart_toEndOf="@+id/img1"
+            app:layout_constraintTop_toBottomOf="@+id/petname"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/breedtext2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/nametext"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/font1"
             android:text="Breed:"
             android:textColor="#000000"
+            android:padding="1dp"
             android:textSize="25sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/breedtext"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.146"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.099"
+            app:layout_constraintStart_toEndOf="@+id/img1"
+            app:layout_constraintTop_toBottomOf="@+id/petname" />
 
         <TextView
             android:id="@+id/contacttext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/breedtext"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/font1"
+            android:padding="1dp"
             android:text="Contact"
             android:textColor="#C59292"
             android:textSize="25sp"
@@ -111,43 +151,44 @@
             android:id="@+id/contacttext2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/breedtext"
             android:fontFamily="@font/font1"
+            android:padding="1dp"
             android:text="Contact:"
             android:textColor="#000000"
             android:textSize="25sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/contacttext"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintHorizontal_bias="0.048"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/addresstext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/breedtext"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/font1"
+            android:padding="1dp"
             android:text="Address"
             android:textColor="#C59292"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.1"
-            app:layout_constraintStart_toEndOf="@+id/contacttext2"
-            app:layout_constraintTop_toBottomOf="@+id/breedtext" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/addresstext2"
+            app:layout_constraintTop_toBottomOf="@+id/nametext2" />
 
         <TextView
             android:id="@+id/addresstext2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/breedtext"
             android:fontFamily="@font/font1"
+            android:padding="1dp"
             android:text="Address:"
             android:textColor="#000000"
             android:textSize="25sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/addresstext"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.156"
+            app:layout_constraintHorizontal_bias="0.049"
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

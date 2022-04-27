@@ -34,6 +34,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
         holder.contact.setText(model.getContact());
         holder.breed.setText(model.getBreed());
         holder.address.setText(model.getAddress());
+        holder.petimage.setText(model.getPetimage());
 
         Glide.with(holder.img.getContext())
             .load(model.getImage())
@@ -53,7 +54,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
     class myViewHolder extends RecyclerView.ViewHolder
             {
                 CircleImageView img;
-                TextView name,contact,breed,address;
+                TextView name,contact,breed,address,petimage;
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
             img = (CircleImageView) itemView.findViewById(R.id.img1);
@@ -61,6 +62,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
             contact =(TextView) itemView.findViewById(R.id.contacttext);
             breed =(TextView) itemView.findViewById(R.id.breedtext);
             address =(TextView) itemView.findViewById(R.id.addresstext);
+            petimage =(TextView) itemView.findViewById(R.id.petnametext);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
